@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500;700&family=Montserrat:wght@400;500;700&display=swap');
+
+
+/* 
+
+font-family: 'Crimson Pro', serif;
+font-family: 'Lora', serif;
+font-family: 'Montserrat', sans-serif;
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: #181719;
+    color: #FFF;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+}
+
+label.logo {
+    font-family: 'Crimson Pro', serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 100px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 8px;
+    margin-left: 3vw;
+}
+
+nav ul {
+    float: right;
+    margin-right: 3vw;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 60px;
+    line-height: 100px;
+}
+
+nav a {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFF;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 100%;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s ease-out;
+}
+
+nav a:hover::after, a.active::after {
+    left: 0;
+    width: 100%;
+}
+
+a.active {
+    font-weight: bold;
+}
+
+nav #icon {
+    color: #fff;
+    font-size: 30px;
+    line-height: 100px;
+    float: right;
+    margin-right: 3vw;
+    cursor: pointer;
+    display: none;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1.8fr 0.2fr;
+    grid-template-areas: 
+    "main images"
+    "footer footer";
+}
+
+main {
+    grid-area: main;
+    margin-left: 3vw;
+
+}
+
+main h1 {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 60px;
+    margin-top: 300px;
+    margin-bottom: 40px;
+}
+
+main p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 48px;
+    margin-right: 200px;
+}
+
+main span {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.images {
+    grid-area: images;
+    margin-right: 3vw;
+    padding: 14px 24px;
+}
+
+.house {
+    width: 100%;
+}
+
+.images img {
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    width: 380px;
+    height: 160px;
+    padding: 10px 20px;
+    background: #181718;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -60px;
+    float: right;
+    right: 5vw;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px
+}
+
+#aliza {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-header-text {
+    height: 60px;
+}
+
+.card-header-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.card-header-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #828282;
+}
+
+.card-content {
+    margin-right: 80px;
+}
+
+.card-content p {
+    font-family: 'Lora', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #A9A9A9;
+}
+
+footer a {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 1px solid #A9A9A9;
+    color: #A9A9A9;
+}
+
+@media only screen and (max-width: 960px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr .5fr 0.2fr;
+        grid-template-areas: 
+        "main"
+        "images"
+        "footer";
+    }
+
+    nav {
+        height: 80px;
+        width: 100%;
+    }
+
+    nav #icon {
+        display: block;
+        line-height: 80px;
+    }
+
+    label.logo {
+        line-height: 80px;
+    }
+
+    nav ul {
+        margin-right: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        background: #181719;
+        transition: all .5s;
+    }
+
+    nav ul.show {
+        right: 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav a {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    main {
+        margin-right: 3vw;
+    }
+    
+    main h1 {
+        font-size: 36px;
+        line-height: 46px;
+        margin-top: 20px;
+        margin-bottom: 24px;
+    }
+    
+    main p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 25px;
+        margin-right: 80px;
+    }
+    
+    main span {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .images {
+        margin-left: 3vw;
+        padding: 0px 0px;
+        align-items: center;
+    }
+    
+    .images .house {
+        position: relative;
+        width: 100%;
+        z-index: -2;
+    }
+    
+    .images img {
+        width: 100%;
+    }
+    
+    .card {
+        position: relative;
+        width: 260px;
+        height: 120px;
+        padding: 5px 10px;
+        margin-top: -50px;
+        float: none;
+        z-index: -1;
+        transform: translateX(26.5%);
+    }
+    
+    .card-header {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 0px;
+        line-height: 50px;
+    }
+    
+    #aliza {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    
+    .card-header-text {
+        height: 50px;
+    }
+    
+    .card-header-text h1 {
+        font-size: 12px;
+        line-height: 24px;
+    }
+    
+    .card-header-text p {
+        font-size: 10px;
+        line-height: 14px;
+        margin-bottom: 0;
+    }
+    
+    .card-content {
+        line-height: 40px;
+        margin-right: 60px;
+    }
+    
+    .card-content p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}

@@ -2,94 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-  maximum-scale=5"
-    />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
     <link rel="icon" href="devchallenges.png" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://devchallenges.io/"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#icon').click(function(){
+            $('ul').toggleClass('show');
+            $('#bars').toggleClass("fas fa-bars fas fa-times");
+          });
+      });
+    </script>
     <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
+    <nav>
+      <label class="logo">this interior</label>
+      <ul>
+        <li><a class="active" href=#>Home</a></li>
+        <li><a href=#>Collection</a></li>
+        <li><a href=#>About</a></li>
+        <li><a href=#>Contact</a></li>
+      </ul>
+      <div id="icon">
+          <i id="bars" class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <div class="container">
+      <main>
+        <h1>Modern interior</h1>
+        <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+        <span>Read more &nbsp;&#129046;</span>
+      </main>
 
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+      <div class="images">
+          <img class="house" src="photo1.png" alt="house interior" />
+          <div class="card">
+            <div class="card-header">
+              <img id="aliza" src="photo2.png" alt="Aliza Webber" />
+              <div class="card-header-text">
+                <h1>Aliza Webber</h1>
+                <p>Interior designer</p>
+              </div>
+            </div>
+            <div class="card-content">
+              <p>Designed in 2020 by Aliza Webber</p>
+            </div>
+          </div>
       </div>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
+      <footer>
+        <p>created by <a href="https://devchallenges.io/portfolio/vitorbizarra" target="_blank">vitorbizarrra</a> - devChallenges.io</p>
+      </footer>
     </div>
   </body>
 </html>
